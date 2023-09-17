@@ -1,5 +1,65 @@
 button:hover {
     background-color: cornflowerblue;
     transition: 1s;
-    
+    }
+
+
+#caption {
+        position: relative;
+        overflow: hidden;
+        text-align: start;
+        width: 80%;
+        margin: auto;
+    }
+
+.caption-image {
+    display: block;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    }
+
+.caption-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    color: ghostwhite;
+    transform: translateY(90%);
+    transition: transform 1s ease-out;
+    }
+
+   #caption:hover .caption-overlay {
+    transform: translateY(0)
+}
+
+
+
+.caption-overlay-title{
+    margin: 0;
+    padding: 0 0 30px;
+    transform: translateY( calc(-100% -10px));
+    transition: transform 1s ease-out;
+}
+
+
+#caption::before {
+    content: ' ';   
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: transparent;
+    transition: background 1s ease-out;
+}
+
+#caption:hover::before {
+    background: rgba(10, 17, 111, 0.5);
+}
+
+.caption{
+    transform: translateZ(0);
 }
